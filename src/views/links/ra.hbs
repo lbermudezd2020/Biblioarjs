@@ -1,0 +1,173 @@
+<!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js -->
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
+
+
+
+
+<body style='margin : 0px; overflow: hidden;'>
+
+  <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType:4x4; debugUIEnabled: false;'>
+
+    
+    <a-marker preset="hiro">
+        <video id="mivideo" crossOrigin="anonymous" src="ra.mp4"></video>
+        <a-video src="#mivideo" position="0 0 0" rotation="270 0 0" ></a-video>
+
+        <script>
+           var m = document.querySelector("a-marker")
+           m.addEventListener("markerFound", (e)=>{
+           console.log("found")
+           var v = document.querySelector('#mivideo').play();
+           })
+           m.addEventListener("markerLost", (e)=>{
+           console.log("lost")
+           var v = document.querySelector('#mivideo').pause();
+          })
+        </script>
+   </a-marker>
+
+
+<!-- 
+    <a-marker type='barcode' value='0'>
+        <img id="img0" crossOrigin="anonymous" src="cat-calculo.jpg"></img>
+        <a-image src="#img0" position="0 0 0" rotation="270 0 0" ></a-imagen>
+          <a-text value="En este pasillo encontraras\nlas siguientes secciones\n\nFISICA\nQUIMICA\nPROGRAMACION\nALGEBRA\nBASES DE DATOS
+REDES\nCALCULO " color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+
+         <a-text value="" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+
+   </a-marker>
+-->
+
+
+
+
+     <a-marker type='barcode' value='0'>
+         <a-text value="En este pasillo encontraras\nlos siguientes temas:\n\nFISICA\nQUIMICA\nPROGRAMACION\nALGEBRA\nBASES DE DATOS
+REDES\nCALCULO " color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+            
+     </a-marker>
+
+
+    <a-marker type='barcode' value='1'>
+        <img id="img1" crossOrigin="anonymous" src="1.jpg"></img>
+        <a-image src="#img1" position="0 0 0" rotation="270 0 0" ></a-imagen>
+        <a-text value="\n\n\n\n\n\nESTRUTURAS DE DATOS\nJAVA" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+
+   <a-marker type='barcode' value='2'>
+        <img id="img2" crossOrigin="anonymous" src="cat-programacion.jpg"></img>
+        <a-image src="#img2" position="0 0 0" rotation="270 0 0" ></a-imagen>
+<a-text value="\n\n\n\n\n\n\n\n\n\nPHYTON\nPASCAL\nPHP\nORACLE\nINGENIERIA DE SOFTWARE" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+  
+   <a-marker type='barcode' value='3'>
+        <img id="img3" crossOrigin="anonymous" src="3.jpg"></img>
+        <a-image src="#img3" position="0 0 0" rotation="270 0 0" ></a-imagen>
+<a-text value="\n\n\n\n\n\n\n\n\n\nUML\nCOMPILADORES\nFUNDAMENTOS DE PROGRAMACION\nDESARROLLO DE SOFTWARE" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+
+   <a-marker type='barcode' value='4'>
+        <img id="img4" crossOrigin="anonymous" src="4.jpg"></img>
+        <a-image src="#img4" position="0 0 0" rotation="270 0 0" ></a-imagen>
+<a-text value="\n\n\n\n\n\n\n\n\n\nDESARROLLO WEB\nXML\nJAVASCRIPRT\nHTML\nESTRUCTURAS DE DATOS" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+
+   
+   <a-marker type='barcode' value='5'>
+        <img id="img5" crossOrigin="anonymous" src="5.jpg"></img>
+        <a-image src="#img5" position="0 0 0" rotation="270 0 0" ></a-imagen>
+<a-text value="\n\n\n\n\n\n\n\nSISTEMAS OPERATIVOS" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+
+   <a-marker type='barcode' value='6'>
+        <img id="img6" crossOrigin="anonymous" src="6.jpg"></img>
+        <a-image src="#img6" position="0 0 0" rotation="270 0 0" ></a-imagen>
+<a-text value="\n\n\n\n\n\n\n\nLENGUAJE ENSAMBLADOR\nMICROPROCESARORES" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+
+    <a-marker type='barcode' value='7'>
+        <img id="img7" crossOrigin="anonymous" src="5.jpg"></img>
+        <a-image src="#img7" position="0 0 0" rotation="270 0 0" ></a-imagen>
+<a-text value="\n\n\n\n\n\n\n\nARQUITECTURA DE COMPUTADORAS\nSISTEMAS DISTRIBUIDOS" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+
+    <a-marker type='barcode' value='8'>
+        <img id="img8" crossOrigin="anonymous" src="imagen2.jpg"></img>
+        <a-image src="#img8" position="0 0 0" rotation="270 0 0" ></a-imagen>
+        <a-text value="\n\n\n\n\n\n\n\nBASES DE DATOS\nESTRUCTURAS DE DATOS\nSISTEMAS DISTRIBUIDOS" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+
+    <a-marker type='barcode' value='9'>
+        <img id="img8" crossOrigin="anonymous" src="imagen2.jpg"></img>
+        <a-image src="#img8" position="0 0 0" rotation="270 0 0" ></a-imagen>
+        <a-text value="\n\n\n\n\n\n\n\nMINERIA DE DATOS\nDATA WAREHOUSE\nMATEMATICAS DISCRETAS" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+    
+    <a-marker type='barcode' value='10'>
+        <img id="img8" crossOrigin="anonymous" src="imagen2.jpg"></img>
+        <a-image src="#img8" position="0 0 0" rotation="270 0 0" ></a-imagen>
+        <a-text value="\n\n\n\n\n\n\n\nANALISIS DE SISTEMAS\nUML\nANALISIS ESTRUCTURADO" color="blue" align="center" position="0 0 0" rotation="0 0 0" ></a-text>
+   </a-marker>
+
+
+
+
+
+
+
+
+
+
+
+
+ <a-marker type='barcode' value='11'>
+         <a-text value="En este pasillo encontraras\nlos siguientes temas:\n\nCALCULO\nCALCULO  MULTIVARIABLE\nGEOMETRIA ANALITICA
+" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+            
+     </a-marker>
+
+
+<a-marker type='barcode' value='12'>
+         <a-text value="Metodos numericos\nAnalisis matematico\nCalculo" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+</a-marker>
+
+<a-marker type='barcode' value='13'>
+        <a-text value="Calculo multivariable" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+</a-marker>
+
+
+<a-marker type='barcode' value='14'>
+         <a-text value="Calculo\nGeometria Analitica" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+</a-marker>
+
+
+<a-marker type='barcode' value='15'>
+         <a-text value="Calculo aplicado\nGeometria Analitica\nCalculo vectorial" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+</a-marker>
+
+
+
+
+<a-marker type='barcode' value='16'>
+         <a-text value="Calc. Vectorial\nCalc Integral\nCalc infinitesimal\nCal. Miltivariable\nCalculo (en Ingles)" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+</a-marker>
+
+
+<a-marker type='barcode' value='17'>
+         <a-text value="Calculo 1 variable" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+</a-marker>
+
+<a-marker type='barcode' value='18'>
+         <a-text value="En este pasillo encontraras\nlas siguientes secciones\n\nCALCULO\nCALCULO  MULTIVARIABLE\nGEOMETRIA ANALITICA
+" color="blue" align="center" position="0 0 0" rotation="270 0 0" >
+</a-marker>
+
+
+
+
+    
+  <a-entity camera></a-entity>
+  </a-scene>
+</body>

@@ -1,0 +1,90 @@
+body {
+    background: #f5f6fa;
+font-family: 'Oswald', sans-serif;
+
+    overflow: hidden;
+}
+
+.index {
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    background: #066111 !important;
+    font-size: 25px;
+}
+
+
+.nav-link {
+    color: #fff !important;
+}
+.navbar-toggle {
+  padding: 0 0;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+
+
+
+.masthead {
+    color: white;
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.masthead h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (min-width: 992px) {
+    .masthead {
+      height: 100vh;
+    }
+    .masthead h1 {
+      font-size: 5.5rem;
+    }
+  }
+
+ p * {
+    display: block;
+  }
+  
+
+  
+  /* Este es nuestro diseño para los campos no válidos */
+  input.invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }
+  
+  input:focus.invalid {
+    outline: none;
+  }
+  
+  /* Este es el diseño para nuestros mensajes de error */
+  .error {
+    width : 100%;
+    padding: 0;
+   
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding: 0.3em;
+  }
+
+  
